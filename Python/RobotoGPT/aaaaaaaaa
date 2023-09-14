@@ -1,0 +1,22 @@
+import tkinter as tk
+from PIL import Image, ImageTk
+
+def redimensionar_imagem(nova_largura, nova_altura):
+    global imagem_tk
+    imagem_redimensionada = imagem_original.resize((nova_largura, nova_altura), Image.ANTIALIAS)
+    imagem_tk = ImageTk.PhotoImage(imagem_redimensionada)
+    label_imagem.config(image=imagem_tk)
+
+janela = tk.Tk()
+janela.title("Redimensionar Imagem")
+
+imagem_original = Image.open("forro.png")
+imagem_tk = ImageTk.PhotoImage(imagem_original)
+
+label_imagem = tk.Label(janela, image=imagem_tk)
+label_imagem.pack()
+
+botao_redimensionar = tk.Button(janela, text="Redimensionar Imagem", command=lambda: redimensionar_imagem(400, 300))
+botao_redimensionar.pack()
+
+janela.mainloop()
