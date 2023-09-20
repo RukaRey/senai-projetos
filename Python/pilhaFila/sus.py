@@ -1,7 +1,7 @@
 import os
 
 sus=["Seu Gerônimo","Dona Aparecida","Empreiteiro Miguel"]
-ficha=3
+ficha=4
 
 def mostrarFila():
     print(f"Pacientes: {sus}")
