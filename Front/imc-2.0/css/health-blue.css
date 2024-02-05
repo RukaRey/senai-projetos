@@ -1,0 +1,128 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    backdrop-filter: blur(2px);
+    background: linear-gradient(to bottom, rgb(251, 255, 241), rgb(180, 197, 228));
+    height: 100vh
+}
+
+.header{
+    background-color: rgb(56, 95, 113);
+    border-bottom: 2px solid rgb(174, 191, 199);
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.visual {
+    position: relative;
+    width: 300px; /* Largura da área */
+    height: 400px; /* Altura da área */
+    border: 2px solid #000;
+}
+
+.visual img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* A imagem ocupa 100% da largura da área */
+    max-height: 50%; /* A imagem pode ocupar no máximo 50% da altura da área */
+}
+
+.visual p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* O parágrafo ocupa 100% da largura da área */
+    max-height: 50%; /* O parágrafo pode ocupar no máximo 50% da altura da área */
+    text-align: center;
+}
+
+.peso-area,
+.altura-area,
+.imc-resultado {
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.calc-button{
+    padding-top: 30px;
+    padding-right: 8px;
+}
+
+.peso-area label{
+    margin-right: 25px;
+    padding-right: 113px;
+}
+
+.altura-area label{
+    margin-right: 25px;
+    padding-right: 113px;
+}
+
+.peso-area input{
+    margin-right: 25px;
+    height: 25px;
+    padding-right: 100px;
+}
+
+.altura-area input{
+    margin-right: 25px;
+    height: 25px;
+    padding-right: 114px;
+}
+
+.calc-button{
+    text-align: center;
+}
+
+.calc-button button{
+    width: 194px;
+    height: 35px;
+}
+
+.imc-resultado{
+    display: flex;
+    flex-direction: row;
+}
+
+.imc-resultado p{
+    border-top: 2px solid #fff;
+    margin-right: 25px;
+    border-bottom: 2px solid #fff;
+    font-size: 33px;
+    height: 50px;
+    text-align: center;
+    background-color: wheat;
+}
+
+.historico, .visual{
+    margin: 30px;
+    margin-top: 130px;
+    width: 350px;
+    height: 600px;
+    border: 2px solid #fff;
+    background-color: rgb(169, 228, 239,0.5);
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visual img{
+    padding: 0px;
+    max-height: 550px;
+    max-width: auto;
+}
+
+.calculadora{
+    margin: 20px;
+    margin-top: 130px;
+    width: 300px;
+    height: 290px;
+    border-radius: 20%;
+    background-color: rgb(169, 228, 239);
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+}

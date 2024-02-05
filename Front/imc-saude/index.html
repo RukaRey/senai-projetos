@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/saude.css">
+    <script src="js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        
+    </div>
+
+    <div class="container">
+
+        <div class="info">
+            <div class="corpo">
+                <img src="img/Human_body_template.png" alt="">
+            </div>
+
+            
+        </div>
+        
+
+        <div class="formulario">
+            <div class="estado-corpo">
+                <p><h1 id="estadao">Estado: Saudável</h1></p>
+            </div>
+            <div class="quests">
+                <form id="foriml">
+
+                    <div class="pesinho">
+                        <label for="peso">Peso:</label>
+                        <input id="peso" type="number" step="0.01" min="20" max="600" >
+                    </div>
+
+                    <div class="alturinha">
+                        <label for="altura">Altura:</label>
+                        <input id="altura" type="number" step="0.01" min="0.50" max="3" >
+                    </div>
+
+                    
+                    
+                </form>
+                <div class="butt">
+                    <button onclick="calcular()">Calcular</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    
+    <div class="rodape">
+        <p>bla bla</p>
+    </div>
+</body>
+</html>
+
+<!-- *calcular saúde do paciente: peso / altura²
+
+*armazenar medições passadas -->

@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.tank{
+    padding-right: 5px;
+    width: 150px;
+    height: 270px;
+    border: 2px solid aqua;
+    background-color: bisque;
+    z-index: 0;
+}
+
+#liquido{
+    width: 127px;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    background-color: aquamarine;
+    top: 10px;
+    right: 143px;
+    z-index: 1;
+}
+
+.tank p{
+    padding-right: 5px;
+}

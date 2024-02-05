@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5f7;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: 	#00529a;
+    border-bottom: 4px solid #f6ca75;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.corpo, .estado-corpo{
+    text-align: center;
+}
+
+.rodape{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #00529a;
+}
+
+.container{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: 430px;
+}
+
+
+.formulario {
+    margin-top: 139px;
+}
+
+.container .corpo img {
+    max-height: 550px;
+    max-width: auto;
+}
+
+.container .estado-corpo {
+    margin-top: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+.formulario{
+    align-items: center;
+    margin-left: 20px;
+}
+.pesinho input{
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+.butt{
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
