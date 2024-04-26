@@ -38,22 +38,22 @@
             <input type="radio" id="decl_trans" name="doc_solicitado" value="1">
             <label for="decl_trans">Declaração de Transferência - R$ 15,00</label><br>
 
-            <input type="radio" id="hist_parcial" name="doc_solicitado" value="1">
+            <input type="radio" id="hist_parcial" name="doc_solicitado" value="2">
             <label for="hist_parcial">Histórico Parcial - R$ 15,00</label><br>
 
-            <input type="radio" id="carta_aprese" name="doc_solicitado" value="1">
+            <input type="radio" id="carta_aprese" name="doc_solicitado" value="3">
             <label for="carta_aprese">Carta de apresentação para estágio optativo - Gratuito</label><br>
 
-            <input type="radio" id="decl_matri" name="doc_solicitado" value="1">
+            <input type="radio" id="decl_matri" name="doc_solicitado" value="4">
             <label for="decl_matri">Declaração de matrícula - Gratuito</label><br>
 
-            <input type="radio" id="seg_via_carte" name="doc_solicitado" value="1">
+            <input type="radio" id="seg_via_carte" name="doc_solicitado" value="5">
             <label for="seg_via_carte">2ª via de carteirinha estudantil - R$ 10,00</label><br>
 
-            <input type="radio" id="emen_escolar" name="doc_solicitado" value="1">
+            <input type="radio" id="emen_escolar" name="doc_solicitado" value="6">
             <label for="emen_escolar">Ementa Escolar - R$ 20,00 por disciplina com teto máximo de R$ 100,00</label><br>
 
-            <input type="radio" id="recuperacao" name="doc_solicitado" value="1">
+            <input type="radio" id="recuperacao" name="doc_solicitado" value="14">
             <label for="recuperacao">Recuperação - R$ 10,00</label><br><br>
             
             <label for="recuperacao">Observação:</label><br>
@@ -69,7 +69,7 @@
 
 <?php
     if (isset($_POST['next'])){
-        if (!empty($_POST['modalidade']) && !empty($_POST['curso']) && !empty($_POST['doc_solicitado'])){
+        if (!empty($_POST['modalidade']) && !empty($_POST['curso']) && isset($_POST['doc_solicitado'])){
             $_SESSION['modalidade'] = $_POST['modalidade'];
             $_SESSION['curso'] = $_POST['curso'];
             $_SESSION['doc_solicitado'] = $_POST['doc_solicitado'];
