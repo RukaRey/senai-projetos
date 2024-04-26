@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 2024-04-26 03:44:04
+-- Tempo de geração: 2024-04-26 14:39:22
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -52,16 +52,45 @@ INSERT INTO `alunos` (`id`, `nome`, `cpf`, `telefone`, `email`, `mod_matricula`,
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `cpf` int(11) NOT NULL,
+  `telefone` varchar(30) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `ativo` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`id`, `nome`, `cpf`, `telefone`, `email`, `ativo`) VALUES
+(3, 'Jonas Completo', 11111111, '32985029064', 'Jonas@gmail.com', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `pedidos_docs`
 --
 
 CREATE TABLE `pedidos_docs` (
-  `id_docs` int(11) NOT NULL,
+  `id_pedido` int(11) NOT NULL,
   `id_aluno` int(11) NOT NULL,
   `tipo_doc` varchar(255) NOT NULL,
-  `preco_emissao` float NOT NULL,
+  `preco_emissao` decimal(10,2) NOT NULL,
   `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `pedidos_docs`
+--
+
+INSERT INTO `pedidos_docs` (`id_pedido`, `id_aluno`, `tipo_doc`, `preco_emissao`, `status`) VALUES
+(19, 3, 'Declaração de matrícula', 0.00, 1);
 
 -- --------------------------------------------------------
 
@@ -95,7 +124,8 @@ INSERT INTO `tipos_doc` (`id_tipos_docs`, `nome`, `preco`, `gratuito`, `limite_p
 (10, '2ª via Historico Escolar', 20, 0, 0, 0),
 (11, 'Declaração de Conclusão', 15, 0, 0, 0),
 (12, 'Declaração para Fins de Aposentadoria', 20, 0, 0, 0),
-(13, 'Histórico Parcial', 15, 0, 0, 0);
+(13, 'Histórico Parcial', 15, 0, 0, 0),
+(14, 'Recuperação', 10, 0, 0, 0);
 
 --
 -- Índices para tabelas despejadas
@@ -108,10 +138,16 @@ ALTER TABLE `alunos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `pedidos_docs`
 --
 ALTER TABLE `pedidos_docs`
-  ADD PRIMARY KEY (`id_docs`);
+  ADD PRIMARY KEY (`id_pedido`);
 
 --
 -- Índices de tabela `tipos_doc`
@@ -130,16 +166,22 @@ ALTER TABLE `alunos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de tabela `pedidos_docs`
 --
 ALTER TABLE `pedidos_docs`
-  MODIFY `id_docs` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `tipos_doc`
 --
 ALTER TABLE `tipos_doc`
-  MODIFY `id_tipos_docs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_tipos_docs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
