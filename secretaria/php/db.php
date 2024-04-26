@@ -27,7 +27,12 @@ function getData($conexao,$tabela){
     }
 }
 
-function setData($conexao,$tabela, $array){
+function setData($conn,$tabela){
+    $verificar = "SELECT * FROM $tabela";
+    return $conn->query($verificar);
+}
+
+function setData2($conexao,$tabela, $array){
     $verificar = "SELECT * FROM $tabela";
     $resultado = mysqli_query($conexao, $verificar);
     
